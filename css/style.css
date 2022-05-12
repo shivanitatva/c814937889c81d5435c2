@@ -1,0 +1,348 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Raleway:wght@300;400;500;600;700;800;900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    font-family: 'Raleway', sans-serif;
+
+}
+html {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+h1,h2,h3,h4,p {
+    margin: 0;
+}
+*,*:after,*::before {
+    box-sizing: border-box;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+}
+.container {
+    max-width: 1220px;
+    padding: 0 25px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* site header */
+
+.site-header .header-wrapper { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.site-header {
+    background-color: #202020;
+    padding: 20px 0;
+}
+.site-header .logo-block h1 a{
+    color: #fff;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 1;
+}
+.site-header nav ul {
+    display: flex;
+}
+.site-header nav ul li+li { margin-left: 15px;}
+
+.site-header nav ul li a{
+    padding: 7px 10px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 14px;
+    color: #fff;
+    transition: all 0.5s;
+    display: inline-block;
+    text-transform: uppercase;
+}
+.site-header nav ul li.active a,.site-header nav ul li a:hover {
+    background-color: #e25050;
+}
+
+/* banner section */
+.hero-slider {
+    overflow: hidden;
+    position: relative;
+}
+.hero-slider .top-container .top-call-block{
+    position: absolute;
+    top: 0;
+    z-index: 11;
+    right: 0;
+}
+.hero-slider .top-container .top-call-block a{
+   position: relative;
+   padding: 10px 10px 10px 50px;
+   background-color: #e25050;
+   font-size: 14px;
+   color: #fff;
+   display: inline-block;
+   transition: all 0.5s;
+   font-family: 'Oswald', sans-serif;
+}
+.hero-slider .top-container .top-call-block a:hover {
+    opacity: 0.6;
+}
+.hero-slider .top-container .top-call-block a em {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 5px;
+    height: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #bd4141;
+    min-width: 40px;
+}
+.hero-slider .container {
+    position: relative;
+}
+.hero-slider .next-btn {
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 11;
+    display: inline-block;
+}
+.hero-slider .prev-btn {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 11;
+    display: inline-block;
+}
+.hero-slider .slide-wrapper {
+    display: flex;
+    transition: transform 0.5s;
+}
+.hero-slider .prev-btn.disable,.hero-slider .next-btn.disable{ opacity: 0.7;}
+.hero-slider .slide-wrapper .slide-item {
+    position: relative;
+    min-height: 300px;
+    z-index: 1;
+    padding-bottom: 7.5%;
+}
+.hero-slider .slide-wrapper img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+.hero-slider .slide-wrapper .slide-content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hero-slider .slide-wrapper .slide-content span {
+    display: inline-block;
+    padding: 10px;
+    color: #fff;
+    margin-bottom: 2px;
+    background-color: #d34f4a;
+    font-size: 12px;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+}
+.hero-slider .slide-wrapper .slide-content h2 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+    padding: 10px;
+    background-color: #242322;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom:2px;
+    font-family: 'Oswald', sans-serif;
+}
+.hero-slider .slide-wrapper .slide-content p{
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+    padding: 10px;
+    background-color: #242322;
+    text-transform: uppercase;
+    display: inline-block;
+    font-family: 'Oswald', sans-serif;
+}
+
+/* fitnesscard */
+.fitness-card-block {
+    padding: 50px 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.fitness-card-block h2 {
+    color: #fff;
+    text-align: center;
+    position: relative;
+    padding-bottom: 8px;
+    margin-bottom: 55px;
+}
+.fitness-card-block h2::after {
+    position: absolute;
+    left: 50%;
+    width: 50px;
+    transform: translateX(-50%);
+    background-color: #fff;
+    height: 2px;
+    content:'';
+    bottom: 0;
+}
+.fitness-card-block ul {
+    display: flex;
+    margin: 0 -10px;
+}
+.fitness-card-block ul li {
+    padding: 0 10px;
+    max-width: 25%;
+    flex: 0 0 25%;
+}
+.flip-card {
+    background-color: transparent;
+    width: 100%;
+    height: 320px;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    cursor: pointer;
+  }
+  .flip-card .image-block {
+      height: 243px;
+      position: relative;
+  }
+  .flip-card .image-block img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  .flip-card .card-title {
+      padding: 22px 15px;
+  }
+  .flip-card h3 { 
+      text-transform: uppercase;
+      font-family: 'Oswald', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 0px;
+      line-height: 1;
+  }
+  .flip-card span {
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    font-size: 12px;
+    color: #afafaf;
+  }
+  .flip-card-front {
+    background-color: #fff;
+    color: #202020;
+  }
+  
+  .flip-card-back p {
+      margin-top: 15px;
+      font-size: 13px;
+      line-height: 1.2;
+      color: #777777;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 400;
+  }
+  .flip-card-back {
+    background-color: #ffffff;
+    color: #202020;
+    transform: rotateY(180deg);
+    padding: 25px 20px;
+  }
+
+@media(max-width:1600px) {
+    .hero-slider .next-btn { right: 5%;}
+    .hero-slider .prev-btn { left: 5%;}
+}
+@media(max-width:1366px) {
+    .hero-slider .container {
+        padding: 0 50px;
+    }
+    .hero-slider .next-btn { right: 2%;}
+    .hero-slider .prev-btn { left: 2%;}
+}
+@media(max-width:1199px) {
+    .hero-slider .slide-wrapper .slide-content {
+        text-align: center;
+    }
+    .hero-slider .slide-wrapper .slide-content h2 {
+        font-size: 26px;
+    }
+    .fitness-card-block ul li {
+        max-width: 50%;
+        flex: 0 0 50%;
+        margin-bottom: 20px;
+    }
+    .fitness-card-block ul {
+        margin-bottom: -20px;
+        flex-wrap: wrap;
+    }
+}
+@media(max-width:767px) {
+    .hero-slider .slide-wrapper .slide-content h2 {
+        font-size: 20px;
+    }
+    .hero-slider .slide-wrapper .slide-content p {
+        font-size: 16px;
+    }
+    .fitness-card-block ul li {
+        max-width: 100%;
+        flex: 0 0 100%;
+    
+    }
+    .container {
+        padding: 0 15px;
+    }
+    
+}
